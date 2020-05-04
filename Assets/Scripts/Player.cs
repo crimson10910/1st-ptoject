@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rg;
-    public float Speed_Player;
-
+    public float speedPlayer;
+    
     void Start()
     {
         rg = GetComponent<Rigidbody2D>();
@@ -16,12 +16,12 @@ public class Player : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") > 0)
         {
-            rg.velocity = new Vector3(Speed_Player, rg.velocity.y, 0f);
+            rg.velocity = new Vector3(speedPlayer, rg.velocity.y, 0f);
         }
 
         else if (Input.GetAxis("Horizontal") < 0)
         {
-            rg.velocity = new Vector3(-Speed_Player, rg.velocity.y, 0f);
+            rg.velocity = new Vector3(-speedPlayer, rg.velocity.y, 0f);
         }
         else
         {
